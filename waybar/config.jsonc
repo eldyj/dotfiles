@@ -1,0 +1,67 @@
+{
+  "height": 30,
+  "spacing": 4,
+  "margin-top": 5,
+  //"margin-bottom": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "hyprland/language",
+    "battery"
+  ],
+  "wlr/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}"
+    //"format-icons": {
+        //"1": "",
+        //"2": "" ,
+        //"3": "" ,
+        //"focused": "",
+        //"default": ""
+      //}
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-ua": "ua",
+        "format-us": "us"
+    },
+
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+
+    "clock": {
+      "format": "{:%H:%M}",
+      "tooltip": true,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+
+   "battery": {
+      "states": {
+        "good": 75,
+        "warning": 35,
+        "critical": 20
+      },
+      "format": "{icon} {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂁","󰁹"]
+    },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "⚠",
+    "on-click": "prime-run kitty nmtui"
+  },
+  "pulseaudio": {
+    "format": "󰕾  {volume}%"
+  }
+}
